@@ -661,3 +661,212 @@ contactSection */
   flex-wrap: wrap;
   margin-top: 30px;
 }
+
+
+
+
+
+/* responsive */
+/* ===============================
+   📱 GLOBAL RESPONSIVE STYLES
+   =============================== */
+
+/* For tablets */
+@media (max-width: 992px) {
+  .navbar {
+    gap: 30px;
+    padding: 15px 20px;
+  }
+
+  .navbar ul {
+    gap: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-content h2 {
+    font-size: 20px;
+  }
+
+  .skills-card {
+    padding: 20px;
+  }
+
+  .about-card {
+    gap: 20px;
+  }
+
+  .project-card {
+    width: 260px;
+    height: 180px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 600px) {
+  /* Navbar stacked */
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .resume-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero-content {
+    margin-top: 40px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Skills */
+  .skills-card {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+
+  /* About */
+  .about-card {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 200px;
+  }
+
+  /* Projects */
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+    max-width: 320px;
+    height: 180px;
+  }
+
+  /* Contact */
+  .contact-container {
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
+  .contact-info, 
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-title {
+    font-size: 24px;
+  }
+
+  .contact-subtitle {
+    font-size: 14px;
+  }
+}
+
+
+/* Navbar base */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* logo left, button right */
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #0b0c2a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.nav-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Toggle button */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 22px;   /* distance from top */
+  right: 30px; /* distance from right */
+  z-index: 1100;
+}
+
+/* Nav links (desktop) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* show button */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #0b0c2a;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .nav-links.open {
+    max-height: 400px; /* expand menu */
+    padding: 20px 0;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+}
